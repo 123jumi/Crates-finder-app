@@ -4,7 +4,6 @@ import { useCrate } from '@/stores/index'
 import CrateCard from '@/components/cards/CrateCard.vue'
 import SearchBar from '@/components/search/SearchBar.vue'
 
-
 const crateStore = useCrate()
 </script>
 <template>
