@@ -55,7 +55,7 @@ const items = computed(() => {
 
 <style scoped lang="sass">
 .card
-  padding-inline: 2rem
+  padding-inline: 1.5rem
 
 .description
   font-size: 1.5rem
@@ -69,7 +69,7 @@ span
   white-space: nowrap
 .rating
   margin: 0.5rem 0
-  font-size: 1.1rem
+  font-size: 1rem
   white-space: nowrap
 .title
   font-size: 1.5rem
@@ -98,9 +98,9 @@ span
 
   .img-resto
     width: 100px
-    padding-bottom: 1rem
+    padding-bottom: 0.8rem
 
   .container:last-child
     justify-content: center !important
-    gap: 0.8rem
+    gap: 0.7rem
 </style>
