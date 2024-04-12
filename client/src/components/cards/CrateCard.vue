@@ -28,7 +28,7 @@ const items = computed(() => {
 </script>
 
 <template>
-    <BCard class="mb-3 w-100 jusitfy-content-around">
+    <BCard class="mb-3 w-100 jusitfy-content-around" v-if="crate.price>0.00001">
       <BRow>
         <BCol class="d-flex flex-column justify-content-center align-items-center m-0 p-0">
           <BImg class="img-resto" rounded="sm"  :src="pic" alt="Image" top />
