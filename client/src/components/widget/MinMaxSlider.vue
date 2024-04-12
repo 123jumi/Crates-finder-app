@@ -52,7 +52,7 @@ watchEffect(() => {
     <div class="input-box">
       <label for="min-input">Min</label>
       <input type="number" name="min-input" :min="props.min" :max="sliderMaxValue - props.step" :step="props.step"
-        v-model.number="sliderMinValue" />
+        v-model.number="sliderMinValue"/>
     </div>
     <div class="input-box">
       <label for="max-input">Max</label>

@@ -4,7 +4,7 @@ import SearchTabs from '@/features/searchResult/components/SearchTabs.vue';
 
 <template>
   <main id="search" class="d-flex flex-column flex-grow-1 justify-content-center align-items-center  p-3">
-     <h1>Crates Finder</h1>
+     <h1 v-b-tooltip="'Discover crates you can purchase using your item inventory in robots farm'">Crates Finder</h1>
     <SearchTabs />
   </main>
 </template>
