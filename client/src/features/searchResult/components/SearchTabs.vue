@@ -7,7 +7,7 @@ const crateStore = useCrate()
 </script>
 <template>
   <BTabs class="tabtab mt-1 searchTabs  w-75" v-if="crateStore.getRestaurantList">
-    <BTab title="find crates" class="postion-absolute" active>
+    <BTab title="find crates" class="postion-absolute" active v-b-tooltip="'Discover crates you can purchase using your item inventory in robots farm'">
       <BContainer class="tel d-flex align-item-center flex-wrap w-75">
         <SearchBar show-filter-btn />
       </BContainer>
