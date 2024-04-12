@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 
-export const http = axios.create({ baseURL: "https://www.cratesfinder.com/api" });
+export const http = axios.create({
+	baseURL: import.meta.env.VITE_API_URL,
+});
 
 http.interceptors.request.use(async (request) => {
 
