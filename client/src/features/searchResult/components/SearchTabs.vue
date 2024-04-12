@@ -60,7 +60,7 @@ h1
     width: 100%
   .list
     height: 70vh
-    padding-bottom: 15rem
+    padding-bottom: 20rem
     padding: auto
     overflow-y: scroll
   
