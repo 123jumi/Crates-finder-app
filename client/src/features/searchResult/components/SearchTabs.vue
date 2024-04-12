@@ -38,7 +38,7 @@ const crateStore = useCrate()
   justify-content: space-between
 .list
   height: 60vh
-  padding-bottom: 5rem
+  padding-bottom: 8rem
   padding: auto
   overflow-y: scroll
 .map
@@ -60,7 +60,7 @@ h1
     width: 100%
   .list
     height: 70vh
-    padding-bottom: 20rem
+    padding-bottom: 17rem
     padding: auto
     overflow-y: scroll
   
