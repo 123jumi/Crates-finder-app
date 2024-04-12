@@ -17,7 +17,7 @@ const crateStore = useCrate()
       </BContainer>
     </BTab>
     
-    <BTab title="profil" class="">
+    <BTab title="profile" class="">
       <BContainer class="d-flex justify-content-center flex-wrap w-75">
         <SearchBar show-filter-btn />
         <h2>Profil coming soon</h2>

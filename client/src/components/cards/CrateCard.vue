@@ -32,7 +32,7 @@ const items = computed(() => {
       <BRow>
         <BCol class="d-flex flex-column justify-content-center align-items-center m-0 p-0">
           <BImg class="img-resto" rounded="sm"  :src="pic" alt="Image" top />
-          <p class="description">Crate level :{{ crate.level }}</p>
+          <p class="description">Crate level: {{ crate.level }}</p>
         </BCol>
         <BCol class="d-flex flex-column justify-content-center align-items-center">
           <h3 class="title">{{ crate.price}} eth</h3>
