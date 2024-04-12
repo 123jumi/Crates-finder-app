@@ -15,13 +15,15 @@ const pic = computed(() => {
 })
 const items = computed(() => {
   return props.crate.stats.map((i) => {
+    if (i.key === "Tesseract") {
+      i.key="cube"
+    } 
     return {
       key: i.key.split(/\s/g)[1]?i.key.split(/\s/g)[1]:i.key,
       value: i.value
     }
   })
 })
-
 
 </script>
 
