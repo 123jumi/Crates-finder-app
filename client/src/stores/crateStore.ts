@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 import { getSearchResults } from "@/services/index";
 
 import type { Crate } from "../interfaces";
@@ -13,7 +13,7 @@ export const useCrate = defineStore("crate", {
 		error: null,
 	}),
 	getters: {
-		getRestaurantList(): Crate[] {
+		getCrateList(): Crate[] {
 			return this.crates;
 		},
 
@@ -22,8 +22,6 @@ export const useCrate = defineStore("crate", {
 		},
 	},
 	actions: {
-		//Get the restaurant by finding it with the id, from the backend
-
 		async fetchSearchResults(address: string, min: number, max: number) {
 			try {
 				this.crates = await getSearchResults(address, min, max);

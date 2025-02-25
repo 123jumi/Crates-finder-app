@@ -1,38 +1,50 @@
 <script setup lang="ts">
-import { useCrate } from '@/stores/index'
+import { useCrate } from "@/stores/index";
 
-import CrateCard from '@/components/cards/CrateCard.vue'
-import SearchBar from '@/components/search/SearchBar.vue'
-const crateStore = useCrate()
+import CrateCard from "@/components/cards/CrateCard.vue";
+import SearchBar from "@/components/search/SearchBar.vue";
+const crateStore = useCrate();
 </script>
 <template>
-  <BTabs class="tabtab mt-1 searchTabs  w-75" v-if="crateStore.getRestaurantList">
-    <BTab title="find crates" class="postion-absolute" active v-b-tooltip="'Discover crates you can purchase using your item inventory in robots farm'">
-      <BContainer class="tel d-flex align-item-center flex-wrap w-75">
-        <SearchBar show-filter-btn />
-      </BContainer>
-      <BContainer v-if="crateStore.getRestaurantList.length" class="d-flex list flex-wrap"
-        :style="{ justifyContent: crateStore.getRestaurantList.length > 1 ? 'space-around' : 'start' }">
-        <CrateCard v-for="crate in crateStore.getRestaurantList" :key="crate.id" :crate="crate" />
-      </BContainer>
-    </BTab>
-    
-    <BTab title="profile" class="">
-      <BContainer class="d-flex justify-content-center flex-wrap w-75">
-        <SearchBar show-filter-btn />
-        <h2>Profil coming soon</h2>
-      </BContainer>
-      <BContainer class="map d-flex flex-row justify-content-center align-items-center">
-     
-      </BContainer>
-    </BTab>
-  </BTabs>
+	<BTabs class="tabtab mt-1 searchTabs w-75" v-if="crateStore.getCrateList">
+		<BTab
+			title="find crates"
+			class="postion-absolute"
+			active
+			v-b-tooltip="
+				'Discover crates you can purchase using your item inventory in robots farm'
+			">
+			<BContainer class="tel d-flex align-item-center flex-wrap w-75">
+				<SearchBar show-filter-btn />
+			</BContainer>
+			<BContainer
+				v-if="crateStore.getCrateList.length"
+				class="d-flex list flex-wrap"
+				:style="{
+					justifyContent: crateStore.getCrateList.length > 1 ? 'space-around' : 'start',
+				}">
+				<CrateCard
+					v-for="crate in crateStore.getCrateList"
+					:key="crate.id"
+					:crate="crate" />
+			</BContainer>
+		</BTab>
+
+		<BTab title="profile" class="">
+			<BContainer class="d-flex justify-content-center flex-wrap w-75">
+				<SearchBar show-filter-btn />
+				<h2>Profil coming soon</h2>
+			</BContainer>
+			<BContainer class="map d-flex flex-row justify-content-center align-items-center">
+			</BContainer>
+		</BTab>
+	</BTabs>
 </template>
 
 <style scoped lang="sass">
 .searchTabs
   width: 90%
-  height: 80vh 
+  height: 80vh
   padding-bottom: 10rem
   overflow: hidden
   justify-content: space-between
@@ -63,5 +75,4 @@ h1
     padding-bottom: 17rem
     padding: auto
     overflow-y: scroll
-  
 </style>
